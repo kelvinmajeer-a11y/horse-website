@@ -1,97 +1,344 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact Us</title>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: linear-gradient(135deg, #0f0f0f, #1e1e1e, #2a2a2a);
+      color: white;
+      font-family: 'EB Garamond', Arial, Helvetica, sans-serif;
+      margin: 0;
+    }
+
+    /* Header */
+    .header {
+      text-align: center;
+      padding: 30px;
+      background: black;
+      border-bottom: 3px solid #c46b2a;
+    }
+
+    .header img {
+      width: 400px;
+      max-width: 100%;
+      border-radius: 8px;
+    }
+
+    .header h1 {
+      color: #d97706;
+      margin-top: 10px;
+      font-size: 1.8rem;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    /* Navigation */
+    nav {
+      text-align: center;
+      padding: 15px;
+      background: #111;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-size: 18px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    nav a:hover {
+      color: #c46b2a;
+    }
+
+    /* Contact Info */
+    .contact-info {
+      text-align: center;
+      padding: 40px 20px 20px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .contact-info h1 {
+      font-size: 1.5rem;
+      margin-bottom: 16px;
+      color: #fff;
+      font-weight: normal;
+    }
+
+    .contact-info p {
+      margin-bottom: 8px;
+      font-size: 1rem;
+      color: #ddd;
+    }
+
+    .contact-info strong {
+      color: #c46b2a;
+    }
+
+    /* Form Section */
+    .form-section {
+      background-color: #000;
+      padding: 60px 20px 80px;
+    }
+
+    .form-container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .form-container h2 {
+      font-size: clamp(2.4rem, 6vw, 3.8rem);
+      font-weight: 400;
+      text-align: center;
+      margin-bottom: 18px;
+      letter-spacing: 0.01em;
+      font-family: 'EB Garamond', Georgia, serif;
+    }
+
+    .form-subtitle {
+      text-align: center;
+      font-size: clamp(1.1rem, 3vw, 1.5rem);
+      color: #fff;
+      margin-bottom: 55px;
+      font-family: 'EB Garamond', Georgia, serif;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 36px;
+    }
+
+    .row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    label {
+      font-size: clamp(1rem, 2.5vw, 1.35rem);
+      font-weight: 400;
+      letter-spacing: 0.01em;
+      font-family: 'EB Garamond', Georgia, serif;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      background-color: #b5541f;
+      border: none;
+      border-bottom: 2px solid #fff;
+      color: #fff;
+      font-family: 'EB Garamond', Georgia, serif;
+      font-size: 1rem;
+      padding: 14px 12px;
+      width: 100%;
+      outline: none;
+      transition: border-bottom-color 0.2s;
+    }
+
+    input[type="text"],
+    input[type="email"] {
+      height: 72px;
+    }
+
+    textarea {
+      height: 130px;
+      resize: vertical;
+    }
+
+    input:focus,
+    textarea:focus {
+      border-bottom-color: #f0a070;
+    }
+
+    .full-width {
+      grid-column: 1 / -1;
+    }
+
+    .submit-btn {
+      display: inline-block;
+      margin-top: 10px;
+      background: transparent;
+      border: 2px solid #fff;
+      color: #fff;
+      font-family: 'EB Garamond', Georgia, serif;
+      font-size: 1.1rem;
+      padding: 14px 48px;
+      cursor: pointer;
+      letter-spacing: 0.05em;
+      transition: background 0.2s, color 0.2s;
+      align-self: flex-start;
+    }
+
+    .submit-btn:hover {
+      background: #fff;
+      color: #000;
+    }
+
+    @media (max-width: 600px) {
+      .row {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+      .form-section {
+        padding: 40px 18px 60px;
+      }
+      .header img {
+        width: 100%;
+      }
+    }
+
+  </style>
 </head>
-<style>
-
-body{
-    background: linear-gradient(135deg,#0f0f0f,#1e1e1e,#2a2a2a);
-    color:white;
-    font-family: Arial, Helvetica, sans-serif;
-    margin:0;
-}
-
-/* top logo bar */
-
-.header{
-    text-align:center;
-    padding:30px;
-    background:black;
-    border-bottom:3px solid #c46b2a;
-}
-
-.logo{
-    font-size:32px;
-    font-weight:bold;
-    letter-spacing:2px;
-}
-
-.subtitle{
-    color:#c46b2a;
-    font-size:16px;
-}
-
-/* navigation */
-
-nav{
-    text-align:center;
-    padding:15px;
-    background:#111;
-}
-
-nav a{
-    color:white;
-    margin:15px;
-    text-decoration:none;
-    font-size:18px;
-}
-
-nav a:hover{
-    color:#c46b2a;
-}
-
-/* page content */
-
-.container{
-    width:90%;
-    max-width:1000px;
-    margin:auto;
-    padding:40px;
-}
-
-/* horse photos */
-
-img{
-    border-radius:8px;
-    margin:10px;
-}
-
-</style>
-
-<div style="text-align:center; margin-top:20px;">
-<img src="images/3459742C-1707-43DE-BEBD-7EF71367C25C.PNG" width="400">
-<h1 style="color:#d97706;">Good Quality Safe / Trail Horses</h1>
-</div>
 <body>
 
+  <!-- HEADER -->
+  <div class="header">
+    <img src="images/3459742C-1707-43DE-BEBD-7EF71367C25C.PNG" alt="Good Quality Safe Trail Horses Logo">
+    <h1>Good Quality Safe / Trail Horses</h1>
+  </div>
 
+  <!-- NAVIGATION -->
+  <nav>
+    <a href="index.html">Home</a> |
+    <a href="horses.html">Horses for Sale</a> |
+    <a href="contact.html">Contact</a>
+  </nav>
 
-  
-<h1>Contact Good Quality Safe / Trail Horses</h1>
+  <!-- CONTACT INFO -->
+  <div class="contact-info">
+    <h1>Contact Good Quality Safe / Trail Horses</h1>
+    <p>For more information about our horses, please contact:</p>
+    <p><strong>Phone:</strong> +1 (708) 872-7065</p>
+    <p><strong>Email:</strong> kelvinmajeer@gmail.com</p>
+    <p>We are happy to answer questions and help arrange shipping anywhere in the USA.</p>
+  </div>
 
-<nav>
-  <a href="index.html">Home</a> |
-  <a href="horses.html">Horses for Sale</a> |
-  <a href="contact.html">Contact</a>
-</nav>
+  <!-- CONTACT FORM -->
+  <div class="form-section">
+    <div class="form-container">
+      <h2>Contact Us</h2>
+      <p class="form-subtitle">For more information, reach out</p>
 
-<p>For more information about our horses, please contact:</p>
+      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
 
-<p><strong>Phone:</strong> +1 (708) 872-7065</p>
-<p><strong>Email:</strong> kelvinmajeer@gmail.com</p>
+        <div class="row">
+          <div class="field">
+            <label for="first-name">First Name</label>
+            <input type="text" id="first-name" name="first_name" />
+          </div>
+          <div class="field">
+            <label for="last-name">Last Name</label>
+            <input type="text" id="last-name" name="last_name" />
+          </div>
+        </div>
 
-<p>We are happy to answer questions and help arrange shipping anywhere in the USA.</p>
+        <div class="row">
+          <div class="field">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="field">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" />
+          </div>
+        </div>
 
+        <div class="row">
+          <div class="field full-width">
+            <label for="message">Message</label>
+            <textarea id="message" name="message"></textarea>
+          </div>
+        </div>
+
+        <button type="submit" class="submit-btn">Send Message</button>
+
+      </form>
+    </div>
+  </div>
+
+<script data-cochat-helper="true">
+// Dark mode sync from parent
+window.addEventListener('message', function(e) {
+    if (e.data && e.data.type === 'darkMode') {
+        document.documentElement.classList.toggle('dark', e.data.dark);
+    }
+});
+
+// CoChat AI helper — lets artifact JS call the LLM
+// Usage: const response = await cochat.ask("What is 2+2?", {model: "", system: ""});
+(function() {
+    // Fallback: fetch first available model if no model ID was injected
+    var _fallbackModel = null;
+    async function _getFallbackModel() {
+        if (_fallbackModel) return _fallbackModel;
+        try {
+            var t = localStorage.getItem('token');
+            var h = t ? {'Authorization': 'Bearer ' + t} : {};
+            var resp = await fetch('/api/models', {headers: h});
+            if (resp.ok) {
+                var data = await resp.json();
+                var models = data.data || data;
+                if (models && models.length > 0) _fallbackModel = models[0].id;
+            }
+        } catch(e) {}
+        return _fallbackModel || '';
+    }
+
+    window.cochat = {
+        ask: async function(prompt, options) {
+            options = options || {};
+            var model = window._cochatModel || await _getFallbackModel();
+            var token = localStorage.getItem('token');
+            var systemPrompt = options.system || '';
+            var messages = [];
+            if (systemPrompt) {
+                messages.push({ role: 'system', content: systemPrompt });
+            }
+            messages.push({ role: 'user', content: prompt });
+
+            var hdrs = { 'Content-Type': 'application/json' };
+            if (token) hdrs['Authorization'] = 'Bearer ' + token;
+
+            var resp = await fetch('/api/chat/completions', {
+                method: 'POST',
+                headers: hdrs,
+                body: JSON.stringify({
+                    model: model,
+                    messages: messages,
+                    stream: false
+                })
+            });
+            if (!resp.ok) {
+                var err = await resp.text();
+                throw new Error('LLM request failed (' + resp.status + '): ' + err);
+            }
+            var data = await resp.json();
+            if (data.choices && data.choices[0] && data.choices[0].message) {
+                return data.choices[0].message.content;
+            }
+            return JSON.stringify(data);
+        }
+    };
+})();
+</script>
+<script data-cochat-model="true">window._cochatModel="openrouter_manifold.anthropic/claude-sonnet-4.6";</script>
 </body>
 </html>
