@@ -1,141 +1,324 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Horses for Sale</title>
+  <style>
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: linear-gradient(135deg, #0f0f0f, #1e1e1e, #2a2a2a);
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+    }
+
+    /* Header */
+    .header {
+      text-align: center;
+      padding: 30px;
+      background: black;
+      border-bottom: 3px solid #c46b2a;
+    }
+
+    .header img {
+      width: 400px;
+      max-width: 100%;
+      border-radius: 8px;
+    }
+
+    .header h1 {
+      color: #d97706;
+      margin-top: 10px;
+      font-size: 1.8rem;
+    }
+
+    /* Navigation */
+    nav {
+      text-align: center;
+      padding: 15px;
+      background: #111;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    nav a:hover {
+      color: #c46b2a;
+    }
+
+    /* Page container */
+    .container {
+      width: 90%;
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    /* Page title */
+    .page-title {
+      text-align: center;
+      padding: 30px 0 10px;
+      font-size: 2.2rem;
+      color: #d97706;
+      letter-spacing: 1px;
+    }
+
+    /* Horse card */
+    .horse-card {
+      background: #1a1a1a;
+      border: 1px solid #c46b2a;
+      border-radius: 12px;
+      padding: 30px;
+      margin-bottom: 50px;
+    }
+
+    .horse-card h1,
+    .horse-card h2 {
+      color: #d97706;
+      margin-bottom: 16px;
+      font-size: 2rem;
+    }
+
+    .horse-card h3 {
+      color: #c46b2a;
+      margin: 20px 0 10px;
+      font-size: 1.2rem;
+    }
+
+    .horse-card p {
+      color: #ddd;
+      line-height: 1.7;
+      margin-bottom: 12px;
+      font-size: 1rem;
+    }
+
+    .horse-card strong {
+      color: #c46b2a;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #c46b2a;
+      margin: 40px 0;
+    }
+
+    /* Images */
+    .photo-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 16px 0;
+    }
+
+    .photo-grid img {
+      width: 300px;
+      max-width: 100%;
+      border-radius: 8px;
+      border: 2px solid #c46b2a;
+      object-fit: cover;
+    }
+
+    /* Video */
+    .video-wrap {
+      margin: 16px 0;
+    }
+
+    .video-wrap iframe {
+      width: 100%;
+      max-width: 560px;
+      height: 315px;
+      border-radius: 8px;
+      border: 2px solid #c46b2a;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .photo-grid img {
+        width: 100%;
+      }
+      .video-wrap iframe {
+        height: 200px;
+      }
+    }
+
+  </style>
 </head>
+<body>
 
-<body><div style="text-align:center; margin-top:20px;">
-<img src="images/3459742C-1707-43DE-BEBD-7EF71367C25C.PNG" width="900">
-<h1 style="color:#d97706;">Good Quality Safe / Trail Horses</h1>
-</div>
-<div class="horse-card">
+  <!-- HEADER -->
+  <div class="header">
+    <img src="images/3459742C-1707-43DE-BEBD-7EF71367C25C.PNG" alt="Good Quality Safe Trail Horses Logo">
+    <h1>Good Quality Safe / Trail Horses</h1>
+  </div>
 
-<img src="images/IMG_8350.JPG">
+  <!-- NAVIGATION -->
+  <nav>
+    <a href="index.html">Home</a> |
+    <a href="horses.html">Horses for Sale</a> |
+    <a href="contact.html">Contact</a>
+  </nav>
 
+  <div class="container">
 
-<h1>Gatsby</h1>
+    <h2 class="page-title">Horses for Sale</h2>
 
-<p>
-⚜️ Gatsby ⚜️ <br><br>
-Percheron x TB Gelding <br>
-10 years old <br>
-17.2hh <br>
-$6500
-</p>
+    <!-- GATSBY -->
+    <div class="horse-card">
+      <h1>⚜️ Gatsby ⚜️</h1>
 
-<p>
-Gatsby is a one in a million gelding. If you are looking for beauty, brains, demeanor and so much more, this is your guy.
-This big gentle giant has done it all. Gatsby has competed in multiple hunts at Myopia in the second and third field, and has enjoyed hunter paces and schooling cross country fences.
-He has been ridden by beginners and is extremely forgiving.
-</p>
+      <p>Percheron x TB Gelding<br>
+      10 years old | 17.2hh | <strong>$6,500</strong></p>
 
-<p>
-Bombproof and traffic safe. He is a point-and-shoot gelding. Over logs, water, hills, and trails — he goes anywhere asked.
-Beautiful forward gaits and a fantastic stop just by saying “Whoa”.
-He also has experience pulling carriages and sleighs.
-</p>
+      <p>Gatsby is a one in a million gelding. If you are looking for beauty, brains, demeanor and so much more, this is your guy.
+      This big gentle giant has done it all. Gatsby has competed in multiple hunts at Myopia in the second and third field, and has enjoyed hunter paces and schooling cross country fences.
+      He has been ridden by beginners and is extremely forgiving.</p>
 
-<p>
-Loads and trailers well, cross ties great, no vices, and has excellent ground manners.
-Only for sale due to owner going in a different direction.
-</p>
+      <p>Bombproof and traffic safe. He is a point-and-shoot gelding. Over logs, water, hills, and trails — he goes anywhere asked.
+      Beautiful forward gaits and a fantastic stop just by saying "Whoa".
+      He also has experience pulling carriages and sleighs.</p>
 
-<p>
-He is sold sight unseen and is up to date on veterinary care including Coggins and soundness.
-Deposit required to hold him.
-We guarantee if he arrives and is not as described, he can be returned or exchanged.
-Transportation can be arranged anywhere in the USA.
-</p>
+      <p>Loads and trailers well, cross ties great, no vices, and has excellent ground manners.
+      Only for sale due to owner going in a different direction.</p>
 
-<h2>Photos</h2>
+      <p>He is sold sight unseen and is up to date on veterinary care including Coggins and soundness.
+      Deposit required to hold him. We guarantee if he arrives and is not as described, he can be returned or exchanged.
+      Transportation can be arranged anywhere in the USA.</p>
 
-<img src="images/IMG_8349.JPG" width="300">
-<img src="images/IMG_8350.JPG" width="300">
-<img src="images/IMG_8351.JPG" width="300">
+      <h3>Photos</h3>
+      <div class="photo-grid">
+        <img src="images/IMG_8349.JPG" alt="Gatsby 1">
+        <img src="images/IMG_8350.JPG" alt="Gatsby 2">
+        <img src="images/IMG_8351.JPG" alt="Gatsby 3">
+      </div>
 
-<h2>Video</h2>
+      <h3>Video</h3>
+      <div class="video-wrap">
+        <iframe src="https://www.youtube.com/embed/Mm4Z2rHxUCE" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
 
-<iframe width="560" height="315"
-src="https://www.youtube.com/embed/Mm4Z2rHxUCE"
-frameborder="0"
-allowfullscreen>
-</iframe>
+    <hr>
 
+    <!-- JULIAN -->
+    <div class="horse-card">
+      <h1>Julian</h1>
 
+      <p><strong>Price:</strong> $10,000</p>
+      <p><strong>Temperament (1 Quiet – 10 Hot):</strong> 1</p>
+      <p><strong>Skills:</strong> All Around, Kid Safe/Family Horse, Lesson Horse, Amateur Friendly, Fox Hunting, Trail Riding, Dressage, Eventing, Hunter Pace, Working Equitation, Husband Horse</p>
+      <p><strong>Maintenance & Special Care:</strong> None</p>
 
+      <p>Julian is a 7 year old registered Friesian Sport Horse gelding standing 15.2 hands high.
+      Julian is the type of horse that we can let anyone climb up on and know they will be safe.
+      He is versatile and happy both in the ring and out on the trails.</p>
 
-</div>
+      <p>The best part about this horse is his personality. He is silly, sweet, and kind, always
+      following people around like a puppy. Whether you want to ride dressage, trail ride,
+      hunt, or just have a great companion, Julian is happy to do it all.</p>
 
+      <p>In the ring, Julian is simple and safe for anyone. More advanced riders can ask more
+      from him and enjoy dressage work, while beginners and kids can ride and feel confident
+      and secure. He rides English and Western and has a nice stop.</p>
 
-<h2>Photos</h2>
+      <p>On the trails, Julian is steady and reliable. He rides alone or with a group, crosses
+      water, is traffic safe, and is not bothered by livestock.</p>
 
-<img src="images/IMG_8349.JPG" width="300">
-<img src="images/IMG_8350.JPG" width="300">
-<img src="images/IMG_8351.JPG" width="300">
+      <p>In the barn he has excellent ground manners and is handled by children daily.
+      He lives outside in a mixed herd and behaves well in a stall.</p>
 
-<h2>Video</h2>
+      <h3>Photos</h3>
+      <div class="photo-grid">
+        <img src="images/IMG_8395.JPG" alt="Julian 1">
+        <img src="images/IMG_8409.JPG" alt="Julian 2">
+        <img src="images/IMG_8423.JPG" alt="Julian 3">
+        <img src="images/IMG_8427.JPG" alt="Julian 4">
+      </div>
 
-<iframe width="560" height="315"
-src="https://www.youtube.com/embed/Mm4Z2rHxUCE"
-frameborder="0"
-allowfullscreen>
-</iframe>
-<hr>
+      <h3>Video</h3>
+      <div class="video-wrap">
+        <iframe src="https://www.youtube.com/embed/_-9OmD4-JtE" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
 
-<h2>Julian</h2>
+  </div>
 
-<p><strong>Price:</strong> $10,000</p>
+<script data-cochat-helper="true">
+// Dark mode sync from parent
+window.addEventListener('message', function(e) {
+    if (e.data && e.data.type === 'darkMode') {
+        document.documentElement.classList.toggle('dark', e.data.dark);
+    }
+});
 
-<p><strong>Temperament (1 Quiet - 10 Hot):</strong> 1</p>
+// CoChat AI helper — lets artifact JS call the LLM
+// Usage: const response = await cochat.ask("What is 2+2?", {model: "", system: ""});
+(function() {
+    // Fallback: fetch first available model if no model ID was injected
+    var _fallbackModel = null;
+    async function _getFallbackModel() {
+        if (_fallbackModel) return _fallbackModel;
+        try {
+            var t = localStorage.getItem('token');
+            var h = t ? {'Authorization': 'Bearer ' + t} : {};
+            var resp = await fetch('/api/models', {headers: h});
+            if (resp.ok) {
+                var data = await resp.json();
+                var models = data.data || data;
+                if (models && models.length > 0) _fallbackModel = models[0].id;
+            }
+        } catch(e) {}
+        return _fallbackModel || '';
+    }
 
-<p><strong>Skills:</strong> All Around, Kid Safe/Family Horse, Lesson Horse, Amateur Friendly, Fox Hunting, Trail Riding, Dressage, Eventing, Hunter Pace, Working Equitation, Husband Horse</p>
+    window.cochat = {
+        ask: async function(prompt, options) {
+            options = options || {};
+            var model = window._cochatModel || await _getFallbackModel();
+            var token = localStorage.getItem('token');
+            var systemPrompt = options.system || '';
+            var messages = [];
+            if (systemPrompt) {
+                messages.push({ role: 'system', content: systemPrompt });
+            }
+            messages.push({ role: 'user', content: prompt });
 
-<p><strong>Maintenance & Special Care:</strong> None</p>
+            var hdrs = { 'Content-Type': 'application/json' };
+            if (token) hdrs['Authorization'] = 'Bearer ' + token;
 
-<p>
-Julian is a 7 year old registered Friesian Sport Horse gelding standing 15.2 hands high.
-Julian is the type of horse that we can let anyone climb up on and know they will be safe.
-He is versatile and happy both in the ring and out on the trails.
-</p>
-
-<p>
-The best part about this horse is his personality. He is silly, sweet, and kind, always
-following people around like a puppy. Whether you want to ride dressage, trail ride,
-hunt, or just have a great companion, Julian is happy to do it all.
-</p>
-
-<p>
-In the ring, Julian is simple and safe for anyone. More advanced riders can ask more
-from him and enjoy dressage work, while beginners and kids can ride and feel confident
-and secure. He rides English and Western and has a nice stop.
-</p>
-
-<p>
-On the trails, Julian is steady and reliable. He rides alone or with a group, crosses
-water, is traffic safe, and is not bothered by livestock.
-</p>
-
-<p>
-In the barn he has excellent ground manners and is handled by children daily.
-He lives outside in a mixed herd and behaves well in a stall.
-</p>
-
-<h3>Photos</h3>
-
-<img src="images/IMG_8395.JPG" width="300">
-<img src="images/IMG_8409.JPG" width="300">
-<img src="images/IMG_8423.JPG" width="300">
-<img src="images/IMG_8427.JPG" width="300">
-<img src="images/IMG_8351.JPG" width="300">
-<img src="images/IMG_8350.JPG" width="300">
-
-<h3>Video</h3>
-
-<iframe width="560" height="315"
-src="https://www.youtube.com/embed/_-9OmD4-JtE"
-frameborder="0"
-allowfullscreen>
-</iframe>
+            var resp = await fetch('/api/chat/completions', {
+                method: 'POST',
+                headers: hdrs,
+                body: JSON.stringify({
+                    model: model,
+                    messages: messages,
+                    stream: false
+                })
+            });
+            if (!resp.ok) {
+                var err = await resp.text();
+                throw new Error('LLM request failed (' + resp.status + '): ' + err);
+            }
+            var data = await resp.json();
+            if (data.choices && data.choices[0] && data.choices[0].message) {
+                return data.choices[0].message.content;
+            }
+            return JSON.stringify(data);
+        }
+    };
+})();
+</script>
+<script data-cochat-model="true">window._cochatModel="openrouter_manifold.anthropic/claude-sonnet-4.6";</script>
 </body>
 </html>
