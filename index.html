@@ -15,7 +15,6 @@ margin:0;
 }
 
 /* HEADER */
-
 .header{
 text-align:center;
 padding:25px;
@@ -34,20 +33,16 @@ color:#d97706;
 margin-top:10px;
 }
 
-/* HAMBURGER MENU */
-
+/* MENU ICON */
 .menu-icon{
 position:absolute;
 top:20px;
 left:20px;
 font-size:34px;
 cursor:pointer;
-color:white;
-z-index:1001;
 }
 
 /* SIDEBAR */
-
 .sidebar{
 height:100%;
 width:0;
@@ -59,7 +54,6 @@ overflow-x:hidden;
 transition:0.4s;
 padding-top:80px;
 z-index:1000;
-box-shadow:5px 0 15px rgba(0,0,0,0.5);
 }
 
 .sidebar a{
@@ -82,8 +76,7 @@ font-size:36px;
 cursor:pointer;
 }
 
-/* CONTACT SECTION */
-
+/* CONTACT */
 .contact-container{
 max-width:800px;
 margin:auto;
@@ -93,24 +86,16 @@ padding:40px 20px;
 .contact-container h2{
 text-align:center;
 color:#d97706;
-margin-bottom:20px;
 }
 
 .contact-info{
 text-align:center;
-margin-bottom:30px;
+margin-bottom:25px;
 }
 
-.contact-info p{
-margin:6px 0;
-}
-
-/* CALL BUTTONS */
-
-.call-btn{
+.call-btn, .text-btn{
 display:block;
 text-align:center;
-background:#28a745;
 padding:14px;
 border-radius:6px;
 color:white;
@@ -119,28 +104,13 @@ text-decoration:none;
 margin-bottom:10px;
 }
 
-.text-btn{
-display:block;
-text-align:center;
-background:#c46b2a;
-padding:14px;
-border-radius:6px;
-color:white;
-font-size:18px;
-text-decoration:none;
-margin-bottom:25px;
-}
+.call-btn{background:#28a745;}
+.text-btn{background:#c46b2a;}
 
-.call-btn:hover{
-background:#34c759;
-}
-
-.text-btn:hover{
-background:#d97706;
-}
+.call-btn:hover{background:#34c759;}
+.text-btn:hover{background:#d97706;}
 
 /* FORM */
-
 form{
 display:flex;
 flex-direction:column;
@@ -159,13 +129,10 @@ border:none;
 border-bottom:2px solid #c46b2a;
 background:#222;
 color:white;
-font-size:16px;
-border-radius:4px;
 }
 
 textarea{
 height:140px;
-resize:vertical;
 }
 
 button{
@@ -183,13 +150,8 @@ background:#d97706;
 }
 
 /* MOBILE */
-
 @media(max-width:600px){
-
-.row{
-grid-template-columns:1fr;
-}
-
+.row{grid-template-columns:1fr;}
 }
 
 </style>
@@ -198,71 +160,56 @@ grid-template-columns:1fr;
 <body>
 
 <!-- SIDEBAR -->
-
 <div id="mySidebar" class="sidebar">
-
 <span class="closebtn" onclick="closeMenu()">×</span>
-
 <a href="index.html">Home</a>
 <a href="horses.html">Horses for Sale</a>
 <a href="contact.html">Contact</a>
 <a href="about.html">Buyer's Guide</a>
-
 </div>
 
 <!-- HEADER -->
-
 <div class="header">
-
 <span class="menu-icon" onclick="openMenu()">☰</span>
-
-<img src="images/3459742C-1707-43DE-BEBD-7EF71367C25C.PNG" width="900">
-
+<img src="images/3459742C-1707-43DE-BEBD-7EF71367C25C.PNG">
 <h1>Good Quality Safe / Trail Horses</h1>
-
 </div>
 
-<!-- CONTACT SECTION -->
-
+<!-- CONTACT -->
 <div class="contact-container">
 
 <h2>Contact Us</h2>
 
 <div class="contact-info">
-
-<p>📞 Phone: +1 (708) 872-7065</p>
-<p>📧 Email: kelvinmajeer@gmail.com</p>
-<p>We can help arrange transportation anywhere in the USA.</p>
-
+<p>📞 +1 (708) 872-7065</p>
+<p>📧 kelvinmajeer@gmail.com</p>
+<p>We can arrange delivery anywhere in the USA.</p>
 </div>
 
 <a href="tel:+17088727065" class="call-btn">📞 Call Now</a>
-
 <a href="sms:+17088727065" class="text-btn">💬 Send Text Message</a>
 
-<form action="https://formsubmit.co/kelvinmajeer@gmail.com" method="POST">
+<form action="https://formsubmit.co/d5e992a3602972d8c83c48c234806392" method="POST">
 
+<!-- SETTINGS -->
 <input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_subject" value="New Horse Inquiry">
+
+<!-- AUTO REPLY -->
+<input type="hidden" name="_autoresponse" value="Thank you for reaching out to Good Quality Safe Trail Horses. We received your message and will get back to you shortly.">
 
 <div class="row">
-
 <input type="text" name="First Name" placeholder="First Name" required>
-
 <input type="text" name="Last Name" placeholder="Last Name">
-
 </div>
 
 <div class="row">
-
 <input type="email" name="Email" placeholder="Email" required>
-
 <input type="text" name="Subject" placeholder="Subject">
-
 </div>
 
 <input type="text" name="Horse Name" placeholder="Horse you are interested in">
-
-<input type="text" name="Location" placeholder="Your city / state">
+<input type="text" name="Location" placeholder="Your City / State">
 
 <textarea name="Message" placeholder="Write your message here..." required></textarea>
 
@@ -277,15 +224,12 @@ We usually respond within a few hours.
 </div>
 
 <script>
-
 function openMenu(){
 document.getElementById("mySidebar").style.width="260px";
 }
-
 function closeMenu(){
 document.getElementById("mySidebar").style.width="0";
 }
-
 </script>
 
 </body>

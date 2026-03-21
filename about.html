@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Buyer's Guide | Good Quality Safe Trail Horses</title>
 
 <style>
@@ -11,67 +12,140 @@ background:black;
 color:white;
 font-family:Arial;
 margin:0;
-padding:0;
 }
 
-.container{
-width:90%;
-max-width:900px;
-margin:auto;
-padding:40px;
-}
-
-h1{
-text-align:center;
-font-size:40px;
-margin-bottom:10px;
-}
-
-h2{
-margin-top:40px;
-color:#ff6a00;
-}
-
-p{
-line-height:1.7;
-font-size:17px;
-}
-
-.box{
-background:#111;
-padding:25px;
-border-radius:10px;
-margin-top:25px;
-}
-
-.contact{
-text-align:center;
-margin-top:50px;
-font-size:18px;
-}
-
+/* HEADER */
 .header{
 text-align:center;
 padding:25px;
 background:black;
 border-bottom:3px solid #c46b2a;
+position:relative;
 }
 
-nav{
-text-align:center;
-padding:15px;
+.header img{
+width:300px;
+max-width:90%;
+}
+
+.header h1{
+color:#d97706;
+}
+
+/* MENU */
+.menu-icon{
+position:absolute;
+top:20px;
+left:20px;
+font-size:34px;
+cursor:pointer;
+}
+
+.sidebar{
+height:100%;
+width:0;
+position:fixed;
+top:0;
+left:0;
 background:#111;
+overflow-x:hidden;
+transition:0.4s;
+padding-top:80px;
+z-index:1000;
 }
 
-nav a{
-color:white;
-margin:15px;
+.sidebar a{
+padding:12px 25px;
 text-decoration:none;
-font-size:18px;
+font-size:20px;
+color:white;
+display:block;
 }
 
-nav a:hover{
+.sidebar a:hover{
+background:#c46b2a;
+}
+
+.closebtn{
+position:absolute;
+top:20px;
+right:25px;
+font-size:36px;
+cursor:pointer;
+}
+
+/* CONTENT */
+.container{
+width:90%;
+max-width:900px;
+margin:auto;
+padding:40px 20px;
+}
+
+h1{
+text-align:center;
+}
+
+h2{
 color:#c46b2a;
+margin-top:30px;
+}
+
+p{
+line-height:1.7;
+}
+
+.box{
+background:#111;
+padding:20px;
+border-radius:10px;
+margin-top:20px;
+}
+
+/* FORM */
+.form-section{
+margin-top:50px;
+}
+
+form{
+display:flex;
+flex-direction:column;
+gap:20px;
+}
+
+.row{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px;
+}
+
+input, textarea{
+padding:12px;
+border:none;
+border-bottom:2px solid #c46b2a;
+background:#222;
+color:white;
+}
+
+textarea{
+height:120px;
+}
+
+button{
+padding:14px;
+background:#c46b2a;
+border:none;
+color:white;
+cursor:pointer;
+}
+
+button:hover{
+background:#d97706;
+}
+
+/* MOBILE */
+@media(max-width:600px){
+.row{grid-template-columns:1fr;}
 }
 
 </style>
@@ -79,95 +153,104 @@ color:#c46b2a;
 
 <body>
 
-<div class="header">
-<img src="images/3459742C-1707-43DE-BEBD-7EF71367C25C.PNG" width="400">
-<h1 style="color:#d97706;">Good Quality Safe / Trail Horses</h1>
-</div>
-
-<nav>
+<!-- SIDEBAR -->
+<div id="sidebar" class="sidebar">
+<span class="closebtn" onclick="closeMenu()">×</span>
 <a href="index.html">Home</a>
 <a href="horses.html">Horses for Sale</a>
 <a href="contact.html">Contact</a>
-<a href="buyers-guide.html">Buyer's Guide</a>
-</nav>
+<a href="about.html">Buyer's Guide</a>
+</div>
 
+<!-- HEADER -->
+<div class="header">
+<span class="menu-icon" onclick="openMenu()">☰</span>
+<img src="images/3459742C-1707-43DE-BEBD-7EF71367C25C.PNG">
+<h1>Good Quality Safe / Trail Horses</h1>
+</div>
+
+<!-- CONTENT -->
 <div class="container">
 
 <h1>Buyer's Guide</h1>
 
-<p style="text-align:center;">
-ALL INTERESTED BUYERS PLEASE READ
-</p>
+<p style="text-align:center;">ALL INTERESTED BUYERS PLEASE READ</p>
 
 <div class="box">
-
 <p>
-Good Quality Safe Trail Horses offers a wide range of quality, versatile horses from different disciplines and backgrounds. Our goal is to match each horse with the most suitable owner. We spend a lot of time working with our horses and speaking with prospective buyers to make the buying process smooth and stress free.
+Good Quality Safe Trail Horses offers a wide range of quality, versatile horses. Our goal is to match each horse with the right owner and make the process smooth and stress free.
 </p>
-
-<p>
-Our horses are in high demand, so to keep things fair for all interested buyers, we ask that everyone review the information below before purchasing.
-</p>
-
 </div>
 
 <h2>Buyer's Responsibility</h2>
-
 <div class="box">
-
 <p>
-The buyer has the responsibility to carefully evaluate a horse before committing to purchase. If you have any concerns about conformation, temperament, stall manners, size, riding ability, or any other detail, please ask questions before making a purchase.
+The buyer is responsible for evaluating the horse before purchase. Please ask any questions about temperament, riding ability, or suitability beforehand.
 </p>
-
-<p>
-Buying a horse without asking questions or doing proper research means the responsibility lies with the buyer. We are always happy to answer questions and provide as much information as possible to help you make the best decision.
-</p>
-
 </div>
 
 <h2>Coming to Try a Horse</h2>
-
 <div class="box">
-
 <p>
-Any appointment to see a horse will require a 10% deposit. The deposit holds the horse until your arrival and is refundable if you come see the horse and decide he is not the right fit for you.
+Appointments require a 10% deposit to hold the horse. The deposit is fully refundable if you come see the horse and decide he is not the right fit.
 </p>
-
-<p>
-There is no risk in coming to look at the horse. The deposit simply protects everyone's time and helps keep things fair and organized for all interested buyers.
-</p>
-
 </div>
 
 <h2>Buying Sight Unseen</h2>
-
 <div class="box">
-
 <p>
-Many of our buyers purchase horses sight unseen. With videos, a PPE (pre-purchase exam), and our written guarantee, buyers can purchase with confidence even if they cannot travel to see the horse in person.
+Many buyers purchase without visiting. With videos and communication, we help ensure confidence in your decision. If the horse is not as described, options can be discussed.
 </p>
+</div>
 
+<h2>Vet Checks</h2>
+<div class="box">
 <p>
-If the horse arrives and is not as described or is not the right fit, he can be shipped back or you are welcome to look at other available options.
+We encourage vet checks. Buyers are welcome to arrange exams with a veterinarian of their choice.
 </p>
+</div>
 
-<p>
-We can help arrange transportation anywhere in the USA.
-</p>
+<!-- CONTACT FORM -->
+<div class="form-section">
+
+<h2 style="text-align:center;">Have Questions? Contact Us</h2>
+
+<form action="https://formsubmit.co/d5e992a3602972d8c83c48c234806392" method="POST">
+
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_subject" value="Buyer Inquiry">
+
+<input type="hidden" name="_autoresponse" value="Thank you for reaching out to Good Quality Safe Trail Horses. We received your message and will get back to you shortly.">
+
+<div class="row">
+<input type="text" name="First Name" placeholder="First Name" required>
+<input type="text" name="Last Name" placeholder="Last Name">
+</div>
+
+<div class="row">
+<input type="email" name="Email" placeholder="Email" required>
+<input type="text" name="Subject" placeholder="Subject">
+</div>
+
+<textarea name="Message" placeholder="Write your message here..." required></textarea>
+
+<button type="submit">Send Message</button>
+
+</form>
 
 </div>
 
-<div class="contact">
-
-<p>For any questions please contact us anytime.</p>
-
-<p>📞 Phone: +1 708-872-7065</p>
-
-<p>📧 Email: kelvinmajeer@gmail.com</p>
-
 </div>
 
-</div>
+<!-- SCRIPT -->
+<script>
+function openMenu(){
+document.getElementById("sidebar").style.width="260px";
+}
+function closeMenu(){
+document.getElementById("sidebar").style.width="0";
+}
+</script>
 
 </body>
 </html>

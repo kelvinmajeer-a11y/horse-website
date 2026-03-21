@@ -1,344 +1,225 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact Us</title>
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&display=swap" rel="stylesheet">
-  <style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Good Quality Safe Trail Horses</title>
 
-    *, *::before, *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&display=swap" rel="stylesheet">
 
-    body {
-      background: linear-gradient(135deg, #0f0f0f, #1e1e1e, #2a2a2a);
-      color: white;
-      font-family: 'EB Garamond', Arial, Helvetica, sans-serif;
-      margin: 0;
-    }
+<style>
 
-    /* Header */
-    .header {
-      text-align: center;
-      padding: 30px;
-      background: black;
-      border-bottom: 3px solid #c46b2a;
-    }
+body{
+background: linear-gradient(135deg,#0f0f0f,#1e1e1e,#2a2a2a);
+color:white;
+font-family:'EB Garamond', Arial;
+margin:0;
+}
 
-    .header img {
-      width: 400px;
-      max-width: 100%;
-      border-radius: 8px;
-    }
+/* HEADER */
+.header{
+text-align:center;
+padding:20px;
+background:black;
+border-bottom:3px solid #c46b2a;
+position:relative;
+}
 
-    .header h1 {
-      color: #d97706;
-      margin-top: 10px;
-      font-size: 1.8rem;
-      font-family: Arial, Helvetica, sans-serif;
-    }
+/* MENU BUTTON */
+.menu-btn{
+position:absolute;
+top:20px;
+left:20px;
+font-size:28px;
+cursor:pointer;
+}
 
-    /* Navigation */
-    nav {
-      text-align: center;
-      padding: 15px;
-      background: #111;
-    }
+/* SIDE MENU */
+.side-menu{
+position:fixed;
+top:0;
+left:-250px;
+width:250px;
+height:100%;
+background:#111;
+padding-top:60px;
+transition:0.3s;
+z-index:1000;
+}
 
-    nav a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
-      font-size: 18px;
-      font-family: Arial, Helvetica, sans-serif;
-    }
+.side-menu a{
+display:block;
+padding:15px;
+color:white;
+text-decoration:none;
+border-bottom:1px solid #333;
+}
 
-    nav a:hover {
-      color: #c46b2a;
-    }
+.side-menu a:hover{
+background:#c46b2a;
+}
 
-    /* Contact Info */
-    .contact-info {
-      text-align: center;
-      padding: 40px 20px 20px;
-      font-family: Arial, Helvetica, sans-serif;
-    }
+/* LOGO */
+.header img{
+width:280px;
+max-width:90%;
+}
 
-    .contact-info h1 {
-      font-size: 1.5rem;
-      margin-bottom: 16px;
-      color: #fff;
-      font-weight: normal;
-    }
+.header h1{
+color:#d97706;
+font-size:20px;
+margin-top:10px;
+}
 
-    .contact-info p {
-      margin-bottom: 8px;
-      font-size: 1rem;
-      color: #ddd;
-    }
+/* CONTACT INFO */
+.contact-info{
+text-align:center;
+padding:30px 20px;
+}
 
-    .contact-info strong {
-      color: #c46b2a;
-    }
+.contact-info p{
+color:#ddd;
+margin:6px 0;
+}
 
-    /* Form Section */
-    .form-section {
-      background-color: #000;
-      padding: 60px 20px 80px;
-    }
+/* FORM */
+.form-section{
+background:#000;
+padding:40px 20px;
+}
 
-    .form-container {
-      max-width: 900px;
-      margin: 0 auto;
-    }
+.form-container{
+max-width:800px;
+margin:auto;
+}
 
-    .form-container h2 {
-      font-size: clamp(2.4rem, 6vw, 3.8rem);
-      font-weight: 400;
-      text-align: center;
-      margin-bottom: 18px;
-      letter-spacing: 0.01em;
-      font-family: 'EB Garamond', Georgia, serif;
-    }
+.form-container h2{
+text-align:center;
+margin-bottom:10px;
+}
 
-    .form-subtitle {
-      text-align: center;
-      font-size: clamp(1.1rem, 3vw, 1.5rem);
-      color: #fff;
-      margin-bottom: 55px;
-      font-family: 'EB Garamond', Georgia, serif;
-    }
+.form-subtitle{
+text-align:center;
+margin-bottom:30px;
+color:#ccc;
+}
 
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 36px;
-    }
+form{
+display:flex;
+flex-direction:column;
+gap:20px;
+}
 
-    .row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-    }
+.row{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px;
+}
 
-    .field {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
+input, textarea{
+padding:12px;
+border:none;
+border-bottom:2px solid #c46b2a;
+background:#222;
+color:white;
+}
 
-    label {
-      font-size: clamp(1rem, 2.5vw, 1.35rem);
-      font-weight: 400;
-      letter-spacing: 0.01em;
-      font-family: 'EB Garamond', Georgia, serif;
-    }
+textarea{
+height:120px;
+}
 
-    input[type="text"],
-    input[type="email"],
-    textarea {
-      background-color: #b5541f;
-      border: none;
-      border-bottom: 2px solid #fff;
-      color: #fff;
-      font-family: 'EB Garamond', Georgia, serif;
-      font-size: 1rem;
-      padding: 14px 12px;
-      width: 100%;
-      outline: none;
-      transition: border-bottom-color 0.2s;
-    }
+button{
+padding:14px;
+background:#c46b2a;
+border:none;
+color:white;
+cursor:pointer;
+}
 
-    input[type="text"],
-    input[type="email"] {
-      height: 72px;
-    }
+button:hover{
+background:#d97706;
+}
 
-    textarea {
-      height: 130px;
-      resize: vertical;
-    }
+/* MOBILE */
+@media(max-width:600px){
+.row{
+grid-template-columns:1fr;
+}
+}
 
-    input:focus,
-    textarea:focus {
-      border-bottom-color: #f0a070;
-    }
-
-    .full-width {
-      grid-column: 1 / -1;
-    }
-
-    .submit-btn {
-      display: inline-block;
-      margin-top: 10px;
-      background: transparent;
-      border: 2px solid #fff;
-      color: #fff;
-      font-family: 'EB Garamond', Georgia, serif;
-      font-size: 1.1rem;
-      padding: 14px 48px;
-      cursor: pointer;
-      letter-spacing: 0.05em;
-      transition: background 0.2s, color 0.2s;
-      align-self: flex-start;
-    }
-
-    .submit-btn:hover {
-      background: #fff;
-      color: #000;
-    }
-
-    @media (max-width: 600px) {
-      .row {
-        grid-template-columns: 1fr;
-        gap: 28px;
-      }
-      .form-section {
-        padding: 40px 18px 60px;
-      }
-      .header img {
-        width: 100%;
-      }
-    }
-
-  </style>
+</style>
 </head>
+
 <body>
 
-  <!-- HEADER -->
-  <div class="header">
-    <img src="images/3459742C-1707-43DE-BEBD-7EF71367C25C.PNG" alt="Good Quality Safe Trail Horses Logo">
-    <h1>Good Quality Safe / Trail Horses</h1>
-  </div>
+<!-- SIDE MENU -->
+<div class="side-menu" id="menu">
+<a href="index.html">Home</a>
+<a href="horses.html">Horses</a>
+<a href="contact.html">Contact</a>
+<a href="about.html">Buyer’s Guide</a>
+</div>
 
-  <!-- NAVIGATION -->
-  <nav>
-    <a href="index.html">Home</a> |
-    <a href="horses.html">Horses for Sale</a> |
-    <a href="contact.html">Contact</a>
-  </nav>
+<!-- HEADER -->
+<div class="header">
+<div class="menu-btn" onclick="toggleMenu()">☰</div>
+<img src="images/3459742C-1707-43DE-BEBD-7EF71367C25C.PNG">
+<h1>Good Quality Safe / Trail Horses</h1>
+</div>
 
-  <!-- CONTACT INFO -->
-  <div class="contact-info">
-    <h1>Contact Good Quality Safe / Trail Horses</h1>
-    <p>For more information about our horses, please contact:</p>
-    <p><strong>Phone:</strong> +1 (708) 872-7065</p>
-    <p><strong>Email:</strong> kelvinmajeer@gmail.com</p>
-    <p>We are happy to answer questions and help arrange shipping anywhere in the USA.</p>
-  </div>
+<!-- INFO -->
+<div class="contact-info">
+<p><strong>Phone:</strong> +1 (708) 872-7065</p>
+<p><strong>Email:</strong> kelvinmajeer@gmail.com</p>
+<p>We can help arrange delivery anywhere in the USA.</p>
+</div>
 
-  <!-- CONTACT FORM -->
-  <div class="form-section">
-    <div class="form-container">
-      <h2>Contact Us</h2>
-      <p class="form-subtitle">For more information, reach out</p>
+<!-- FORM -->
+<div class="form-section">
+<div class="form-container">
 
-      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+<h2>Contact Us</h2>
+<p class="form-subtitle">Send us a message anytime</p>
 
-        <div class="row">
-          <div class="field">
-            <label for="first-name">First Name</label>
-            <input type="text" id="first-name" name="first_name" />
-          </div>
-          <div class="field">
-            <label for="last-name">Last Name</label>
-            <input type="text" id="last-name" name="last_name" />
-          </div>
-        </div>
+<form action="https://formsubmit.co/d5e992a3602972d8c83c48c234806392" method="POST">
 
-        <div class="row">
-          <div class="field">
-            <label for="email">Email *</label>
-            <input type="email" id="email" name="email" required />
-          </div>
-          <div class="field">
-            <label for="subject">Subject</label>
-            <input type="text" id="subject" name="subject" />
-          </div>
-        </div>
+<!-- SETTINGS -->
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_subject" value="New Horse Inquiry">
 
-        <div class="row">
-          <div class="field full-width">
-            <label for="message">Message</label>
-            <textarea id="message" name="message"></textarea>
-          </div>
-        </div>
+<!-- AUTO REPLY -->
+<input type="hidden" name="_autoresponse" value="Thank you for reaching out to Good Quality Safe Trail Horses. We received your message and will get back to you shortly.">
 
-        <button type="submit" class="submit-btn">Send Message</button>
+<div class="row">
+<input type="text" name="First Name" placeholder="First Name" required>
+<input type="text" name="Last Name" placeholder="Last Name">
+</div>
 
-      </form>
-    </div>
-  </div>
+<div class="row">
+<input type="email" name="Email" placeholder="Email" required>
+<input type="text" name="Subject" placeholder="Subject">
+</div>
 
-<script data-cochat-helper="true">
-// Dark mode sync from parent
-window.addEventListener('message', function(e) {
-    if (e.data && e.data.type === 'darkMode') {
-        document.documentElement.classList.toggle('dark', e.data.dark);
-    }
-});
+<textarea name="Message" placeholder="Write your message here..." required></textarea>
 
-// CoChat AI helper — lets artifact JS call the LLM
-// Usage: const response = await cochat.ask("What is 2+2?", {model: "", system: ""});
-(function() {
-    // Fallback: fetch first available model if no model ID was injected
-    var _fallbackModel = null;
-    async function _getFallbackModel() {
-        if (_fallbackModel) return _fallbackModel;
-        try {
-            var t = localStorage.getItem('token');
-            var h = t ? {'Authorization': 'Bearer ' + t} : {};
-            var resp = await fetch('/api/models', {headers: h});
-            if (resp.ok) {
-                var data = await resp.json();
-                var models = data.data || data;
-                if (models && models.length > 0) _fallbackModel = models[0].id;
-            }
-        } catch(e) {}
-        return _fallbackModel || '';
-    }
+<button type="submit">Send Message</button>
 
-    window.cochat = {
-        ask: async function(prompt, options) {
-            options = options || {};
-            var model = window._cochatModel || await _getFallbackModel();
-            var token = localStorage.getItem('token');
-            var systemPrompt = options.system || '';
-            var messages = [];
-            if (systemPrompt) {
-                messages.push({ role: 'system', content: systemPrompt });
-            }
-            messages.push({ role: 'user', content: prompt });
+</form>
 
-            var hdrs = { 'Content-Type': 'application/json' };
-            if (token) hdrs['Authorization'] = 'Bearer ' + token;
+</div>
+</div>
 
-            var resp = await fetch('/api/chat/completions', {
-                method: 'POST',
-                headers: hdrs,
-                body: JSON.stringify({
-                    model: model,
-                    messages: messages,
-                    stream: false
-                })
-            });
-            if (!resp.ok) {
-                var err = await resp.text();
-                throw new Error('LLM request failed (' + resp.status + '): ' + err);
-            }
-            var data = await resp.json();
-            if (data.choices && data.choices[0] && data.choices[0].message) {
-                return data.choices[0].message.content;
-            }
-            return JSON.stringify(data);
-        }
-    };
-})();
+<!-- SCRIPT -->
+<script>
+function toggleMenu(){
+let menu = document.getElementById("menu");
+if(menu.style.left === "0px"){
+menu.style.left = "-250px";
+}else{
+menu.style.left = "0px";
+}
+}
 </script>
-<script data-cochat-model="true">window._cochatModel="openrouter_manifold.anthropic/claude-sonnet-4.6";</script>
+
 </body>
 </html>
