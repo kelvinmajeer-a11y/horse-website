@@ -19,47 +19,12 @@ margin:0;
 /* HEADER */
 .header{
 text-align:center;
-padding:20px;
+padding:25px;
 background:black;
 border-bottom:3px solid #c46b2a;
 position:relative;
 }
 
-/* MENU BUTTON */
-.menu-btn{
-position:absolute;
-top:20px;
-left:20px;
-font-size:28px;
-cursor:pointer;
-}
-
-/* SIDE MENU */
-.side-menu{
-position:fixed;
-top:0;
-left:-250px;
-width:250px;
-height:100%;
-background:#111;
-padding-top:60px;
-transition:0.3s;
-z-index:1000;
-}
-
-.side-menu a{
-display:block;
-padding:15px;
-color:white;
-text-decoration:none;
-border-bottom:1px solid #333;
-}
-
-.side-menu a:hover{
-background:#c46b2a;
-}
-
-/* LOGO */
 .header img{
 width:280px;
 max-width:90%;
@@ -67,8 +32,51 @@ max-width:90%;
 
 .header h1{
 color:#d97706;
-font-size:20px;
+font-size:22px;
 margin-top:10px;
+}
+
+/* MENU ICON */
+.menu-icon{
+position:absolute;
+top:20px;
+left:20px;
+font-size:32px;
+cursor:pointer;
+}
+
+/* SIDEBAR */
+.sidebar{
+height:100%;
+width:0;
+position:fixed;
+top:0;
+left:0;
+background:#111;
+overflow-x:hidden;
+transition:0.4s;
+padding-top:80px;
+z-index:1000;
+}
+
+.sidebar a{
+padding:12px 25px;
+text-decoration:none;
+font-size:20px;
+color:white;
+display:block;
+}
+
+.sidebar a:hover{
+background:#c46b2a;
+}
+
+.closebtn{
+position:absolute;
+top:20px;
+right:25px;
+font-size:36px;
+cursor:pointer;
 }
 
 /* CONTACT INFO */
@@ -142,9 +150,7 @@ background:#d97706;
 
 /* MOBILE */
 @media(max-width:600px){
-.row{
-grid-template-columns:1fr;
-}
+.row{grid-template-columns:1fr;}
 }
 
 </style>
@@ -152,8 +158,9 @@ grid-template-columns:1fr;
 
 <body>
 
-<!-- SIDE MENU -->
-<div class="side-menu" id="menu">
+<!-- SIDEBAR -->
+<div id="sidebar" class="sidebar">
+<span class="closebtn" onclick="closeMenu()">×</span>
 <a href="index.html">Home</a>
 <a href="horses.html">Horses</a>
 <a href="contact.html">Contact</a>
@@ -162,19 +169,19 @@ grid-template-columns:1fr;
 
 <!-- HEADER -->
 <div class="header">
-<div class="menu-btn" onclick="toggleMenu()">☰</div>
+<span class="menu-icon" onclick="openMenu()">☰</span>
 <img src="images/3459742C-1707-43DE-BEBD-7EF71367C25C.PNG">
 <h1>Good Quality Safe / Trail Horses</h1>
 </div>
 
-<!-- INFO -->
+<!-- CONTACT INFO -->
 <div class="contact-info">
 <p><strong>Phone:</strong> +1 (708) 872-7065</p>
 <p><strong>Email:</strong> kelvinmajeer@gmail.com</p>
 <p>We can help arrange delivery anywhere in the USA.</p>
 </div>
 
-<!-- FORM -->
+<!-- CONTACT FORM -->
 <div class="form-section">
 <div class="form-container">
 
@@ -211,13 +218,11 @@ grid-template-columns:1fr;
 
 <!-- SCRIPT -->
 <script>
-function toggleMenu(){
-let menu = document.getElementById("menu");
-if(menu.style.left === "0px"){
-menu.style.left = "-250px";
-}else{
-menu.style.left = "0px";
+function openMenu(){
+document.getElementById("sidebar").style.width="260px";
 }
+function closeMenu(){
+document.getElementById("sidebar").style.width="0";
 }
 </script>
 
